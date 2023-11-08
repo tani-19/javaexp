@@ -1,0 +1,32 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.canvas.*;
+import javafx.scene.paint.Color;
+import javafx.scene.Group;
+public class canvas extends Application {
+public void start(Stage stage)
+{
+stage.setTitle("creating canvas");
+Canvas canvas = new Canvas(100.0f, 100.0f);
+GraphicsContext graphics_context =
+canvas.getGraphicsContext2D();
+graphics_context.setFill(Color.RED);
+graphics_context.fillRect(20, 20, 70, 70);
+Department of Information Technology | APSIT
+graphics_context.setFill(Color.BLUE);
+graphics_context.fillOval(30, 30, 70, 70);
+Group group = new Group(canvas);
+Scene scene = new Scene(group, 200, 200);
+stage.setScene(scene);
+stage.show();
+}
+public static void main(String args[])
+{
+launch(args);
+}
+}
