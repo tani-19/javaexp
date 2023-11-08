@@ -1,0 +1,112 @@
+***Aim: Program to demonstrate default constructor
+DEFAULT CONSTRUCTOR
+
+import.java.util.*;
+class Student
+{
+int id; 
+String name; boolean b; void display()
+{ System.out.println(id+" "+name+" "+b);
+} public static void main(String args[])
+{
+Student s1=new Student(); 
+Student s2=new Student(); Student s3=new Student(); 
+s1.display();
+s2.display();
+s3.display();
+}
+}
+
+***Program to demonstrate parameterized constructor
+PARAMETERIZED CONSTRUCTOR:
+
+import.java.util.*;
+class Student
+{
+int id;
+String name;
+Student (int i,String n)
+{
+id = i; name = n;
+}
+void display()
+{
+System.out.println(id+" "+name);
+}
+public static void main(String args[])
+{
+Student s1=new Student(111,"Pushkar"); 
+Student s2=new Student(222,"Bhushan"); 
+s1.display();
+s2.display();
+}
+}
+
+
+**Aim:Program to demonstrate copy constructor
+COPY CONSTRUCTOR:
+
+import.java.util.*;
+class Student
+{
+int id;
+String name;
+{
+id = i; name = n;
+}
+Student(Student s)
+{
+id = s.id; 
+name =s.name;
+}
+void display()
+{
+System.out.println(id+" "+name);
+}
+public static void main(String args[])
+{
+Student s1 = new Student(111,"Karan"); 
+Student s2 = new Student(s1); 
+s1.display();
+s2.display();
+}
+}
+
+CONSTRUCTOR CHAINING:
+
+import.java.util.*;
+class Employee
+{
+public String empName; 
+public int empSalary; 
+public String address;
+public Employee()
+{
+this("Chaitanya");
+}
+public Employee(String name)
+{
+this(name, 120035);
+}
+public Employee(String name, int sal)
+{
+this(name, sal, "Gurgaon");
+}
+public Employee(String name, int sal, String addr)
+{
+this.empName=name; 
+this.empSalary=sal; 
+this.address=addr;
+}
+void disp() {
+System.out.println("Employee Name: "+empName);
+
+System.out.println("Employee Salary: "+empSalary); 
+System.out.println("Employee Address: "+address);
+}
+public static void main(String[] args)
+{
+Employee obj = new Employee(); 
+obj.disp();
+}
+}
