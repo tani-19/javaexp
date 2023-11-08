@@ -1,0 +1,59 @@
+**Program 1 : Reading input by creating object of Scanner class
+import java.util.Scanner;
+class main {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+System.out.print("Enter your name:");
+String name = input.nextLine();
+System.out.println("My name is " + name);
+input.close();
+}
+}
+
+***Program 2: WAP to print infn (Principal,Interest,time duration address,Simple interest)
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in); 
+System.out.print("Enter the principal: ");
+double principal = input.nextDouble();
+System.out.print("Enter the rate: "); 
+double rate = input.nextDouble();
+System.out.print("Enter the time: ");
+double time = input.nextDouble();
+double interest = (principal * time * rate) / 100;
+System.out.println("Principal: " + principal);
+System.out.println("Interest Rate:" + rate);
+System.out.println("Time Duration:" + time);
+System.out.println("Simple Interest:" + interest);
+input.close();
+}
+
+Program 3:Implement a java program to calculate gross salary & net salary taking the
+following data.
+import java.util.*;
+public class employee {
+public static void main(String[] args) {
+Scanner obj = new Scanner(System.in);
+String Id;
+String EName;
+double BSalary;
+System.out.println("Enter Employee ID");
+Id = obj.next();
+System.out.println("Enter Employee name");
+EName = obj.next();
+System.out.println("Enter Employee Basic Salary");
+BSalary = obj.nextDouble();
+double HRA = (10*BSalary)/100;
+double DA = (73*BSalary)/100;
+double GS=BSalary+DA+HRA;
+double incometax=(30*GS)/100;
+double NET = GS - incometax;
+System.out.println("Employee Id :" + Id +"\n");
+System.out.println("Employee name : " + EName +"\n");
+System.out.println("Employee DA=" + DA +"\n");
+System.out.println("Employee HRA=" + HRA +"\n");
+System.out.println("Employee Gross Salary="+GS+"\n");
+System.out.println("Employee Net Salary ="+NET+"\N");
+}
+}
