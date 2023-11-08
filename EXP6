@@ -1,0 +1,117 @@
+***Aim: WAP to demonstrate ID Array
+
+ARRAY1:
+import java.util.*;
+class Array1
+{
+public static void main(String args[])
+{
+int a[]=new int[5];
+a[0]=10;//initialization
+a[1]=20;
+a[2]=70;
+a[3]=40;
+a[4]=50;
+for(int i=0;i<a.length;i++)
+System.out.println(a[i]);
+}
+}
+
+ARRAY2:
+import java.util.*;
+class Array2
+{
+static void min(int arr[])
+{
+int min=arr[0];
+for(int i=1;i<arr.length;i++)
+if(min>arr[i])
+min=arr[i];
+System.out.println(min);
+}
+public static void main(String args[])
+{
+int a[]={33,3,4,5};
+min(a);
+}
+}
+
+***Aim: WAP to demonstrate 2D Array
+
+ARRAY3:
+import java.util.*;
+class Array3
+{
+public static void main(String args[])
+{ 
+int a[][]={{1,3,4},{3,4,5}};
+int b[][]={{1,3,4},{3,4,5}};
+int c[][]=new int[2][3]; 
+for(int i=0;i<2;i++){ 
+for(int j=0;j<3;j++){ 
+c[i][j]=a[i][j]+b[i][j];
+System.out.print(c[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
+
+VECTOR1:
+import java.util.*;
+public class Vector1{
+public static void main(String args[])
+{
+/* Vector of initial capacity(size) of 2 */
+Vector<String> vec = new Vector<String>(2);
+/* Adding elements to a vector*/
+vec.addElement("Apple");
+vec.addElement("Orange");
+vec.addElement("Mango");
+vec.addElement("Fig");
+/*check size and capacityIncrement*/
+System.out.println("Size is: "+vec.size());
+System.out.println("Default capacity increment is: "+vec.capacity());
+vec.addElement("fruit1");
+vec.addElement("fruit2");
+vec.addElement("fruit3");
+/*size and capacityIncrement after two insertions*/
+System.out.println("Size after addition: "+vec.size());
+System.out.println("Capacity after increment is: "+vec.capacity());
+/*Display Vector elements */
+Enumeration en = vec.elements();
+System.out.println("\nElements are:");
+while(en.hasMoreElements())
+System.out.print(en.nextElement() + "\n");
+}
+}
+
+VECTOR2:
+iimport java.util.Vector;
+public class Vector2
+{
+public static void main(String[] args) {
+//create a Vector object
+Vector<String> v = new Vector<String>();
+//Add elements to Vector
+v.add("Apple");
+v.add("Orange");
+v.add("Guava");
+v.add("Papaya");
+v.add("Pinapple");
+v.add("Apple");
+v.add("Orange");
+boolean x = v.contains("Guava");
+System.out.println("Does Vector contain Guava?"+x);
+int index = v.indexOf("Papaya");
+if(index ==-1)
+System.out.println("Vector does not contain Papaya");
+else
+System.out.println("Vector contains Papaya at index :"+index);
+int lastIndex=v.lastIndexOf("Orange");
+if(lastIndex==-1)
+System.out.println("Vector does not contain Orange");
+else
+System.out.println("Last occurrence of Orange in Vector is at index :"+ lastIndex);
+}
+}
