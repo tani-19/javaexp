@@ -1,0 +1,94 @@
+ONLY ADDITION:
+Program:
+import java.util.*; 
+interface i1
+{ 
+public void add(int x,int y);
+}
+class ABC implements i1
+{
+public void add (int x,int y)
+{
+int z=x+y; 
+System.out.println("addition="+z);
+}
+public static void main(String A[])
+{
+Scanner sc=new Scanner(System.in); 
+System.out.println("Enter two integers no"); 
+int a=sc.nextInt();
+int b=sc.nextInt(); 
+ABC obj=new ABC(); 
+obj.add(a,b);
+}
+}
+
+ADDITION AND SUBTRACTION:
+Program :
+import java.util.*; 
+interface i1
+{ 
+public void add(int x,int y);
+}
+interface i2 extends i1
+{ 
+public void subtract(int x,int y);
+}
+class ABC implements i1
+{
+public void add (int x,int y)
+{
+int z=x+y; 
+System.out.println("addition="+z);
+}
+public void subtract(int x,int y)
+{
+int s=x-y; 
+System.out.println("subtraction="+s);
+}
+public static void main(String A[])
+{
+Scanner sc=new Scanner(System.in); 
+System.out.println("Enter two integers no"); 
+int a=sc.nextInt();
+int b=sc.nextInt(); 
+ABC obj=new ABC(); 
+obj.add(a,b); 
+obj.subtract(a,b);
+}
+}
+
+
+PROGRAM:
+import java.util.*; 
+interface I1
+{
+public void add(int x,int y);
+}
+interface I2 extends I1
+{
+public void subtract(int x,int y);
+}
+class ABC implements I1
+{
+public void add(int x , int y)
+{
+int z = x + y; 
+System.out.println("addition="+z);
+}
+public void subtract(int x , int y)
+{
+int s = x - y; System.out.println("Subtraction="+s);
+}
+public static void main(String A[])
+{
+Scanner sc = new Scanner(System.in); 
+System.out.println("Enter Two integers no"); 
+int a = sc.nextInt();
+int b = sc.nextInt(); 
+I1 obj = new ABC(); 
+obj.add(a,b);
+//obj.subtract(a,b);
+}
+}
+
