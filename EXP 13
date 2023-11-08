@@ -1,0 +1,128 @@
+1. To display the JLabel :
+
+import javax.swing.*;
+class LabelExmaple
+{
+public static void main(String args[])
+{
+ JFrame f= new JFrame("Label Example");
+JLabel l1,l2;
+l1=new JLabel("First Label.");
+l1.setBounds(50,50, 100,30);
+l2=new JLabel("Second Label.");
+l2.setBounds(50,100, 100,30);
+f.add(l1); f.add(l2);
+f.setSize(300,300);
+f.setLayout(null);
+f.setVisible(true);
+}
+}
+
+2. To display the Buttons :
+
+import javax.swing.*;
+public class ButtonExample
+{
+ public static void main(String[] args)
+{
+ JFrame f=new JFrame();//creating instance of JFrame |
+JButton b=new JButton("click");//creating instance of JButton
+b.setBounds(130,100,100, 40);//x axis, y axis, width, height
+f.add(b);//adding button in JFrame
+f.setSize(400,500);//400 width and 500 height
+f.setLayout(null);//using no layout managers
+f.setVisible(true);//making the frame visible
+}
+}
+
+3. To display the JCheckBox :
+
+import javax.swing.*;
+public class CheckBoxExample
+{
+CheckBoxExample()
+{
+JFrame f= new JFrame("CheckBox Example");
+JCheckBox checkBox1 = new JCheckBox("C++");
+checkBox1.setBounds(100,100, 50,50);
+JCheckBox checkBox2 = new JCheckBox("Java", true);
+checkBox2.setBounds(100,150, 50,50);
+f.add(checkBox1);
+f.add(checkBox2);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}
+public static void main(String args[])
+{
+new CheckBoxExample();
+}
+}
+
+4. To display the JRadioButtons:
+
+import javax.swing.*;
+public class RadioButtonExample
+{
+JFrame f;
+RadioButtonExample()
+{
+f=new JFrame();
+JRadioButton r1=new JRadioButton("A) Male");
+JRadioButton r2=new JRadioButton("B) Female");
+r1.setBounds(75,50,100,30);
+r2.setBounds(75,100,100,30);
+ButtonGroup bg=new ButtonGroup(); bg.add(r1);bg.add(r2);
+f.add(r1);f.add(r2);
+f.setSize(300,300);
+f.setLayout(null);
+f.setVisible(true);
+}
+public static void main(String[] args)
+{
+new RadioButtonExample();
+}
+}
+
+5. To display the JtextFields:
+
+import javax.swing.*;
+class TextFieldExample
+{
+public static void main(String args[])
+{
+JFrame f= new JFrame("TextField Example");
+JTextField t1,t2;
+t1=new JTextField("Welcome to Java Programming Lab.");
+t1.setBounds(50,100, 400,50);
+t2=new JTextField("It's Last practical of JPL..!!! Enjoy");
+t2.setBounds(50,150, 450,50);
+f.add(t1); f.add(t2);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}
+}
+
+6. display the JcomboBox :
+
+import javax.swing.*;
+public class ComboBoxExample
+{
+JFrame f;
+ComboBoxExample()
+{
+f=new JFrame("ComboBox Example");
+String country[]={"India", "Aus", "U.S.A", "England", "Newzealand"};
+JComboBox cb=new JComboBox(country);
+cb.setBounds(50,50,90,20);
+f.add(cb);
+f.setLayout(null);
+f.setSize(400,500);
+f.setVisible(true);
+}
+public static void main(String[] args)
+{
+new ComboBoxExample();
+}
+}
