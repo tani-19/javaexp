@@ -1,0 +1,125 @@
+1:Method Overloading with Different Number of parameters in argument list
+
+class Overloading
+{
+ public void disp(char c)
+ {
+ System.out.println(c);
+ }
+ public void disp(char c, int num)
+ {
+ System.out.println(c + " "+num);
+ }
+ }
+class Sample
+{
+ public static void main(String args[])
+ {
+ Overloading obj = new Overloading1();
+ obj.disp('a');
+ obj.disp('a',10);
+ }
+}
+
+2 : Method Overloading with Difference in data type of parameters
+Program:
+class Overloading
+{
+ public void disp(char c)
+ {
+ System.out.println(c);
+ }
+ public void disp(int c)
+ {
+ System.out.println(c );
+ }
+}
+class Sample2
+{
+ public static void main(String args[])
+ {
+ Overloading obj = new Overloading2();
+ obj.disp('a');
+ obj.disp(5);
+ }
+}
+
+
+3. Overloading – Sequence of data type of arguments :
+Program:
+class Overloading
+{
+ public void disp(char c, int num)
+ {
+ System.out.println("I’m the first definition of method disp");
+ }
+ public void disp(int num, char c)
+ {
+ System.out.println("I’m the second definition of method disp" );
+ }
+}
+class Sample3
+{
+ public static void main(String args[])
+ {
+ Overloading obj = new Overloading3();
+ obj.disp('x', 51 );
+ obj.disp(52, 'y');
+ }
+}
+
+4. Method Overloading with Type Promotion :
+Program:
+class Demo
+{
+ void disp(int a, double b)
+ {
+System.out.println("Method A");
+ }
+ void disp(int a, double b, double c)
+ {
+System.out.println("Method B");
+ }
+ public static void main(String args[])
+ {
+Demo obj = new Demo();
+/* I am passing float value as a second argument but
+* it got promoted to the type double, because there
+* wasn't any method having arg list as (int, float)
+*/
+obj.disp(100, 20.67f);
+ }
+}
+
+• Constructor Overloading :
+Program:
+class Student
+{
+ int id;
+ String name;
+ int age;
+ //creating two arg constructor
+ Student(int i, String n)
+ {
+ id = i;
+ name = n;
+ }
+ //creating three arg constructor
+ Student(int i, String n, int a)
+ {
+ id = i;
+ name = n;
+ age=a;
+ }
+ void display()
+{
+System.out.println(id+" "+name+" "+age);
+}
+ public static void main(String args[])
+ {
+ Student s1 = new Student(111,"Karan");
+ Student s2 = new Student(222,"Aryan",25);
+ s1.display();
+ s2.display();
+ }
+} 
