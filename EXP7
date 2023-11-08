@@ -1,0 +1,125 @@
+***Aim: WAP to demonstrate Simple Inheritance.
+SIMPLE INHERITANCE:
+import java.util.*; 
+class A
+{
+void method1()
+{
+System.out.println("I am in class A");
+}
+}
+class B extends A
+{
+void method2()
+{
+System.out.println("I am in class B");
+}
+}
+class single
+{
+public static void main(String args[])
+{
+obj = new B(); 
+obj.method2(); 
+obj.method1();
+}
+}
+
+Program 2:
+MULTIPLE INHERITANCE:
+import java.util.*; 
+class A
+{
+void msg()
+{
+System.out.println("hello");
+}
+}
+class B
+{
+void msg()
+{
+System.out.println("Welcome");
+}
+}
+class C extends A,B
+{
+public static void main(String args[])
+{
+C.obj = new C();
+obj.msg();
+}
+}
+
+Aim: WAP to demonstrate Multilevel Inheritance
+
+
+Program 3:
+MULTILEVEL INHERITANCE:
+
+import java.util.*; 
+class A
+{
+void method1()
+{
+{System.out.println("I am in class A");
+}
+}
+class B extends A
+{ 
+void method2()
+{
+System.out.println("I am in class B");
+}
+}
+class C extends B
+{
+void method3()
+{
+System.out.println("I am in class C");
+}
+}
+class multilevel
+{
+public static void main(String args[])
+{
+obj=new C(); 
+obj.method3(); 
+obj.method1(); 
+obj.method2();
+}
+}
+
+Aim: WAP to demonstrate Hierarchical
+
+HIERARCHIAL INHERITANCE
+import java.util.*; class A
+{
+void method1()
+{
+System.out.println("I am in class A");
+}
+}
+class B extends A
+{
+void method2()
+{
+System.out.println("I am in class B");
+}
+}
+class C extends A
+{
+void method3()
+{
+System.out.println("I am in class C");
+}
+}
+class hierarchial
+{
+public static void main(String args[])
+{
+C obj=new C();
+obj.method3(); 
+obj.method1();
+}
+}
