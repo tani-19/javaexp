@@ -1,0 +1,114 @@
+***Program 1 : SINGLE TRY CATCH BLOCK
+class division
+{
+public static void main(String args[])
+{
+int num1, num2;
+try
+{
+num1 = 0;
+num2 = 62/num1;
+System.out.println(num2);
+System.out.println("Hey I'm at the end of try block");
+}
+catch (ArithmeticException e)
+{
+System.out.println("You should not divide a number by zero");
+}
+System.out.println("I'm out of try-catch block in Java.");
+}
+}
+
+2: MULTIPLE CATCH BLOCKS
+class Example2
+{
+public static void main(String args[])
+{
+try
+{
+int a[]=new int[7];
+a[4]=30/0;
+System.out.println("First print statement in try block");
+}
+catch (ArithmeticException e)
+{
+System.out.println("Warning: Arithmetic Exception");
+}
+catch (ArrayIndexOutOfBoundsException e)
+{
+System.out.println("Warning: ArrayIndexOutOfBoundsException");
+}
+catch (Exception e)
+{
+System.out.println("Warning: Some Other exception");
+}
+System.out.println("Out of try-catch block...");
+}
+}
+
+3:TRY CATCH THROW
+public class ThrowExample
+{
+static void checkEligibilty(int stuage, int stuweight)
+{
+if(stuage<12 && stuweight<40)
+{
+throw new ArithmeticException("Student is not eligible for registration");
+}
+else
+{
+System.out.println("Student Entry is Valid!!");
+}
+}
+public static void main(String args[])
+{
+System.out.println("Welcome to the Registration process!!");
+checkEligibilty(10, 39);
+System.out.println("Have a nice day..");
+}
+}
+
+TRY CATCH FINALLY KEYWORD:
+class finallly
+{
+public static void main(String args[])
+{
+try{
+int num=121/0;
+System.out.println(num);
+}
+catch (ArithmeticException e)
+{
+System.out.println("Number should not be divided by zero");
+}
+/* Finally block will always execute
+*even if there is no exception in try block
+*/
+finally
+{
+System.out.println("This is finally block");
+}
+System.out.println("Out of hy-catch-finally");
+}
+}
+
+TRY RETURN FINALLY:
+class JavaFinally
+{
+public static void main(String args[])
+{
+System.out.println(JavaFinally.myMethod());
+}
+public static int myMethod()
+{
+try
+{
+return 112;
+}
+finally
+{
+System.out.println("This is Finally block");
+System.out.println("Finally block ran even after return statement");
+}
+}
+}
